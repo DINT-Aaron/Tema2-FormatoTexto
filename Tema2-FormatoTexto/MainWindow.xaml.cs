@@ -24,5 +24,47 @@ namespace Tema2_FormatoTexto
         {
             InitializeComponent();
         }
+
+        private void textoEntradaTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            textoFormateadoTextBox.Text = textoEntradaTextBox.Text;
+        }
+
+        private void negritaCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            textoFormateadoTextBox.FontWeight = FontWeights.Bold;
+        }
+
+        private void negritaCheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            textoFormateadoTextBox.FontWeight = FontWeights.Normal;
+        }
+
+        private void cursivaTextBox_Checked(object sender, RoutedEventArgs e)
+        {
+            textoFormateadoTextBox.FontStyle = FontStyles.Italic;
+        }
+
+        private void cursivaTextBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            textoFormateadoTextBox.FontStyle = FontStyles.Normal;
+        }
+
+        private void colorAzulRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (textoEntradaTextBox.Text.Length > 0)
+            {
+                textoFormateadoTextBox.Foreground = Brushes.Blue;
+            }
+        }
+        private void colorRojoRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            textoFormateadoTextBox.Foreground = Brushes.Red;
+        }
+
+        private void colorVerdeRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            textoFormateadoTextBox.Foreground = Brushes.Green;
+        }
     }
 }

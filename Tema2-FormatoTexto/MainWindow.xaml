@@ -8,9 +8,14 @@
         Title="Texto con formato" Icon="assets/64.ico" Height="450" Width="800">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="72,105,0,0" TextWrapping="Wrap" Text="Texto" VerticalAlignment="Top"/>
-        <TextBox x:Name="textoEntradaTextBox" HorizontalAlignment="Left" Height="60" Margin="72,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <CheckBox x:Name="negritaCheckBox" Content="Negrita" HorizontalAlignment="Left" Margin="238,126,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <CheckBox x:Name="cursivaTextBox" Content="Cursiva" HorizontalAlignment="Left" Margin="318,126,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
+        <TextBox x:Name="textoEntradaTextBox" HorizontalAlignment="Left" Height="60" Margin="72,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textoEntradaTextBox_TextChanged"/>
+        <CheckBox x:Name="negritaCheckBox" Content="Negrita" HorizontalAlignment="Left" Margin="238,126,0,0" VerticalAlignment="Top" FontWeight="Bold" Checked="negritaCheckBox_Checked" Unchecked="negritaCheckBox_Unchecked"/>
+        <CheckBox x:Name="cursivaTextBox" Content="Cursiva" HorizontalAlignment="Left" Margin="318,126,0,0" VerticalAlignment="Top" FontStyle="Italic" Checked="cursivaTextBox_Checked" Unchecked="cursivaTextBox_Unchecked"/>
+        <TextBlock HorizontalAlignment="Left" Margin="407,125,0,0" TextWrapping="Wrap" Text="Color del texto" VerticalAlignment="Top"/>
+        <RadioButton x:Name="colorAzulRadioButton" Content="Azul" HorizontalAlignment="Left" Margin="490,106,0,0" VerticalAlignment="Top" GroupName="color" IsChecked="True" Checked="colorAzulRadioButton_Checked"/>
+        <RadioButton x:Name="colorRojoRadioButton" Content="Rojo" HorizontalAlignment="Left" Margin="490,126,0,0" VerticalAlignment="Top" GroupName="color" Checked="colorRojoRadioButton_Checked"/>
+        <RadioButton x:Name="colorVerdeRadioButton" Content="Verde" HorizontalAlignment="Left" Margin="490,146,0,0" VerticalAlignment="Top" GroupName="color" Checked="colorVerdeRadioButton_Checked"/>
+        <TextBlock x:Name="textoFormateadoTextBox" HorizontalAlignment="Left" Margin="134,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" Height="26" FontSize="16" TextTrimming="WordEllipsis" Background="#FFEAF1AD" Foreground="Blue" TextAlignment="Center"/>
 
     </Grid>
 </Window>
