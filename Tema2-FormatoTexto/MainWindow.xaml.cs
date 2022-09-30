@@ -23,6 +23,7 @@ namespace Tema2_FormatoTexto
         public MainWindow()
         {
             InitializeComponent();
+            colorAzulRadioButton.IsChecked = true;
         }
 
         private void textoEntradaTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -52,10 +53,7 @@ namespace Tema2_FormatoTexto
 
         private void colorAzulRadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            if (textoEntradaTextBox.Text.Length > 0)
-            {
-                textoFormateadoTextBox.Foreground = Brushes.Blue;
-            }
+            textoFormateadoTextBox.Foreground = Brushes.Blue;
         }
         private void colorRojoRadioButton_Checked(object sender, RoutedEventArgs e)
         {
